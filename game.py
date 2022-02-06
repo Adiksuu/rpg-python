@@ -20,9 +20,123 @@ while game_running == True:
 
 
 # ZDEFINIOWANIE STATYSTYK
-    player = {'name': 'Adiksuu', 'attack': 13, 'heal': 14, 'health': 100}
+    player = {'name': 'Adiksuu', 'attack': 13, 'heal': 18, 'health': 100}
     monster = {'name': 'BOSS', 'attack_min': 11, 'attack_max': 15, 'health': 200}
     new_round = True
+
+    #SPRAWDZANIE NOWEGO POZIOMU
+    if xp_remain <= 0:
+        if xp_max == False:
+            level = level + 1
+            if level == 2:
+                xp_remain = 200
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 5
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +5 attack! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 3:
+                xp_remain = 300
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 10
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +10 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 4:
+                xp_remain = 400
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 15
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +15 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 5:
+                xp_remain = 500
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 20
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +20 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 6:
+                xp_remain = 600
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 25
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +25 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 7:
+                xp_remain = 700
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 30
+                player['health'] = player['health'] + 5
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +30 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +5 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 8:
+                xp_remain = 800
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 35
+                player['health'] = player['health'] + 10
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +35 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +10 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 9:
+                xp_remain = 900
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 40
+                player['health'] = player['health'] + 10
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +40 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +10 hp! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+            if level == 10:
+                xp_remain = 1000
+                xp_max = True
+                print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+                player['attack'] = player['attack'] + 50
+                player['health'] = player['health'] + 15
+                print('')
+                print('---' * 7)
+                print(Fore.BLUE + 'Otrzymujesz +50 attack! ' + Fore.CYAN +
+                      'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+                print(Fore.BLUE + 'Otrzymujesz +15 hp! ' + Fore.CYAN + 'Aktualnie posiadasz: ' + str(player['health']) + Fore.RED + ' HP')
+
+
+    if xp_max == True:
+        print(Fore.RED + '---' * 7)
+        print(Fore.RED + 'Osiągnąłeś maksymalny poziom!')
+        print(Fore.RED + '---' * 7)
+        print('')
+
+    if xp_remain <= 0:
+        if xp_max == False:
+            level = level + 1
+            print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
+            player['attack'] = player['attack'] + 5
+            print('')
+            print('---' * 7)
+            print(Fore.BLUE + 'Otrzymujesz +5 attack! ' + Fore.CYAN +
+                  'Aktualnie posiadasz: ' + str(player['attack']) + Fore.RED + ' ATTACK')
+            print('')
 
     print(Fore.CYAN + '---' * 5)
     player['name'] = input(Fore.BLUE + 'Nazwa gracza: ')
@@ -75,11 +189,6 @@ while game_running == True:
             print(Fore.LIGHTGREEN_EX + 'Twój poziom: ' + Fore.GREEN + str(level) + ' lvl')
             if xp_max == False:
                 print(Fore.LIGHTGREEN_EX + 'Do następnego poziomu brakuje ci: ' + Fore.GREEN + str(xp_remain) + ' xp')
-            if xp_max == True:
-                print(Fore.RED + '---' * 7)
-                print(Fore.RED + 'Osiągnąłeś maksymalny poziom!')
-                print(Fore.RED + '---' * 7)
-                print('')
             
 
         elif player_choice == '4':
@@ -102,36 +211,11 @@ while game_running == True:
             new_round = False
             xp_remain = xp_remain - 10
 
-        #SPRAWDZANIE NOWEGO POZIOMU
-            if xp_remain <= 0:
-                if xp_max == False:
-                    level = level + 1
-                    print(Fore.YELLOW + 'Osiągnałeś poziom: ' + str(level))
-                    if level == 2:
-                        xp_remain = 200
-                    if level == 3:
-                        xp_remain = 300
-                    if level == 4:
-                        xp_remain = 400
-                    if level == 5:
-                        xp_remain = 500
-                    if level == 6:
-                        xp_remain = 600
-                    if level == 7:
-                        xp_remain = 700
-                    if level == 8:
-                        xp_remain = 800
-                    if level == 9:
-                        xp_remain = 900
-                    if level == 10:
-                        xp_remain = 1000
-                        xp_max = True
-
 
         elif monster_won == True:
             print(Fore.LIGHTGREEN_EX + monster['name'] + Fore.GREEN + ' Wygrywa!')
             new_round = False
-            xp_remain = xp_remain - 5
+            xp_remain = xp_remain - 1
         #SPRAWDZANIE NOWEGO POZIOMU
             if xp_remain <= 0:
                 level = level + 1
